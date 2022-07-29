@@ -3,11 +3,13 @@ type CardOptions = {
   name: string;
   imageSrc: string;
   price: number;
+  countryCode: string;
 };
 
-function createProductCardHtml({ id, name, imageSrc, price }: CardOptions) {
+function createProductCardHtml({ id, name, imageSrc, price, countryCode }: CardOptions) {
   const cardItem = document.createElement("div");
   cardItem.id = id;
+  cardItem.dataset.countryCode = countryCode;
   cardItem.className = "item";
 
   const cardImage = document.createElement("img");

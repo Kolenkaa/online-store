@@ -1,25 +1,7 @@
 import * as noUiSlider from "nouislider";
 import { products } from "./data/products";
 import { createProductCardHtml } from "./features/productCard/createProductCardHtml";
-
-console.log("Dom isn't not loaded yet");
-
-document.addEventListener("DOMContentLoaded", function () {
-  const productsGrid = document.getElementById("products-grid");
-
-  console.log(productsGrid, "productsGrid");
-
-  products.forEach((product) => {
-    const productCardHtml = createProductCardHtml({
-      id: product.id,
-      name: product.name,
-      imageSrc: product.img,
-      price: product.price,
-    });
-
-    productsGrid.appendChild(productCardHtml);
-  });
-});
+import { countryFilterCheckboxes } from "./features/filters/countryFilter";
 
 import "nouislider/dist/nouislider.css";
 import "./styles.scss";
@@ -63,4 +45,22 @@ noUiSlider.create(slider2, {
       return parseInt(value.toString());
     },
   },
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const productsGrid = document.getElementById("products-grid");
+
+  console.log(countryFilterCheckboxes, "inputss");
+
+  products.forEach((product) => {
+    const productCardHtml = createProductCardHtml({
+      id: product.id,
+      name: product.name,
+      imageSrc: product.img,
+      price: product.price,
+      countryCode: product.teamCountry,
+    });
+
+    productsGrid.appendChild(productCardHtml);
+  });
 });
