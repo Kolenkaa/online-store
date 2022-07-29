@@ -1,484 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Анлайн крама</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-	<title>Анлайн крама</title>
-</head>
-
-<body>
-	<header class="header">
-		<div class="header__container container">
-			<div class="header__top">
-				<div class="header__top-wrapper wrapper">
-					<ul class="header__contacts">
-						<li class="header__contacts-phone">
-							<img class="header__contacts-icon" src="./assets/icon/phone.svg" alt="icon-phone" width="32"
-								height="32">
-							<a href="tel:+375298689609" class="phone-link">+375298689609</a>
-						</li>
-						<li class="header__contacts-email">
-							<img class="header__contacts-icon" src="./assets/icon/email.svg" alt="icon-mail" width="32"
-								height="32">
-							<a href="mailto:kkolenkaa@gmail.com" class="email-link">kkolenkaa@gmail.com</a>
-						</li>
-					</ul>
-					<ul class="header__right-side">
-						<li class="header__location">
-							<img class="header__contacts-icon" src="./assets/icon/location.svg" alt="icon-location" width="32"
-								height="32">
-							<a class="location-link" href="https://goo.gl/maps/4Ff3eikigqK1hTu37" target="blank">Наша лакацыя</a>							
-						</li>
-						<li class="header__signin">
-							<img class="header__contacts-icon" src="./assets/icon/login.svg" alt="icon-sigin" width="32"
-								height="32">
-							<div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-								aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-								<div class="modal-dialog modal-dialog-centered">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalToggleLabel">Аўтарызацыя</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal"
-												aria-label="Close"></button>
-										</div>
-										<div class="modal-body">
-											<form class="row g-3">
-												<div class="col-md-6">
-													<label for="inputEmail4" class="form-label">Электронная пошта</label>
-													<input type="email" class="form-control" id="inputEmail4">
-												</div>
-												<div class="col-md-6">
-													<label for="inputPassword4" class="form-label">Пароль</label>
-													<input type="password" class="form-control" id="inputPassword4">
-												</div>
-												<div class="col-12">
-													<div class="form-check">
-														<input class="form-check-input" type="checkbox" id="gridCheck">
-														<label class="form-check-label" for="gridCheck">
-															Запомніць мяне
-														</label>
-													</div>
-												</div>
-												<div class="col-12">
-													<button type="submit" class="btn btn-primary">Увайсці</button>
-												</div>
-											</form>
-										</div>
-										<div class="modal-footer">
-											<button class="btn btn-primary" data-bs-target="#exampleModalToggle2"
-												data-bs-toggle="modal">Рэгістрацыя</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
-								aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-								<div class="modal-dialog modal-dialog-centered">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title" id="exampleModalToggleLabel2">Рэгістрацыя</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal"
-												aria-label="Close"></button>
-										</div>
-										<div class="modal-body">
-											<form class="row g-3">
-												<div class="col-md-4">
-													<label for="validationServer01" class="form-label">Імя</label>
-													<input type="text" class="form-control is-valid" id="validationServer01"
-														value="Mark" required>
-													<div class="valid-feedback">
-														Выглядае добра!
-													</div>
-												</div>
-												<div class="col-md-4">
-													<label for="validationServer02" class="form-label">Прозвішча</label>
-													<input type="text" class="form-control is-valid" id="validationServer02"
-														value="Otto" required>
-													<div class="valid-feedback">
-														Выглядае добра!
-													</div>
-												</div>
-												<div class="col-md-4">
-													<label for="validationServerUsername" class="form-label">Імя карыстальніка</label>
-													<div class="input-group has-validation">
-														<span class="input-group-text" id="inputGroupPrepend3">@</span>
-														<input type="text" class="form-control is-invalid"
-															id="validationServerUsername"
-															aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
-															required>
-														<div id="validationServerUsernameFeedback" class="invalid-feedback">
-															Выберыце імя карыстальніка.
-														</div>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<label for="validationServer03" class="form-label">Горад</label>
-													<input type="text" class="form-control is-invalid" id="validationServer03"
-														aria-describedby="validationServer03Feedback" required>
-													<div id="validationServer03Feedback" class="invalid-feedback">
-														Укажыце сапраўдны горад.
-													</div>
-												</div>
-												<div class="col-md-3">
-													<label for="validationServer04" class="form-label">Краіна</label>
-													<select class="form-select is-invalid" id="validationServer04"
-														aria-describedby="validationServer04Feedback" required>
-														<option selected disabled value="">Выбраць...</option>
-														<option>...</option>
-													</select>
-													<div id="validationServer04Feedback" class="invalid-feedback">
-														Выберыце сапраўдную краіну.
-													</div>
-												</div>
-												<div class="col-12">
-													<div class="form-check">
-														<input class="form-check-input is-invalid" type="checkbox" value=""
-															id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-														<label class="form-check-label" for="invalidCheck3">
-															Згодны з умовамі
-														</label>
-														<div id="invalidCheck3Feedback" class="invalid-feedback">
-															Вы павінны пагадзіцца перад адпраўкай.
-														</div>
-													</div>
-												</div>
-												<div class="col-12">
-													<button class="btn btn-primary" type="submit">Адправіць форму</button>
-												</div>
-											</form>
-										</div>
-										<div class="modal-footer">
-											<button class="btn btn-primary" data-bs-target="#exampleModalToggle"
-												data-bs-toggle="modal">Аўтарызацыя</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle"
-								role="button">Уваход</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="header__bottom">
-				<div class="header__bottom-wrapper wrapper">
-					<div class="header__logo">
-						<img class="header__logo-icon" src="./assets/icon/logo.svg" alt="icon-logo" width="64" height="64">
-						<span class="header__logo-name">Крама футбольных рэчаў</span>
-					</div>
-					<div class="header__working-time">
-						<span>Час працы:</span>
-						<span>пн-сб: 10-00 -- 23-00</span>
-					</div>
-					<a class="header__cart">
-						<img class="header__cart-icon" src="./assets/icon/cart.svg" alt="icon-cart" width="32" height="32">
-						<span>0</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<main class="main">
-		<div class="container main__container">
-			<aside class="filter">
-				<div class="filter__title">Фільтар</div>
-				<div class="filter__wrapper">
-					<div class="filter__country" id="filter-country">
-						<h3 class="filter__country-title filter-title">Краіна</h3>
-						<div class="filter__section checkbox">
-							<label for="italy" class="checkbox__label">
-								<input type="checkbox" name="" id="italy" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Італія</span>
-							</label>
-							<label for="spain" class="checkbox__label">
-								<input type="checkbox" name="" id="spain" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Іспанія</span>
-							</label>
-							<label for="germany" class="checkbox__label">
-								<input type="checkbox" name="" id="germany" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Германія</span>
-							</label>
-							<label for="france" class="checkbox__label">
-								<input type="checkbox" name="" id="france" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Францыя</span>
-							</label>
-							<label for="england" class="checkbox__label">
-								<input type="checkbox" name="" id="england" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Англія</span>
-							</label>
-							<label for="netherlands" class="checkbox__label">
-								<input type="checkbox" name="" id="netherlands" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Нідэрланды</span>
-							</label>
-						</div>
-					</div>
-					<div class="filter__price" id="filter-price">
-						<h3 class="filter__price-title filter-title">Цана</h3>
-						<div id="slider1"></div>
-					</div>
-					<div class="filter__clothes" id="filter-clothes">
-						<h3 class="filter__clothes-title filter-title">Экіпіроўка</h3>
-						<div class="filter__section checkbox">
-							<label for="t-shirt" class="checkbox__label">
-								<input type="checkbox" name="" id="t-shirt" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Цішотка</span>
-							</label>
-							<label for="football-kit" class="checkbox__label">
-								<input type="checkbox" name="" id="football-kit" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Футбольная форма</span>
-							</label>
-							<label for="training-suit" class="checkbox__label">
-								<input type="checkbox" name="" id="training-suit" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Трэніровачны касцюм</span>
-							</label>
-							<label for="other" class="checkbox__label">
-								<input type="checkbox" name="" id="other" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Іншае</span>
-							</label>
-						</div>
-					</div>
-					<div class="filter__count" id="filter-count">
-						<h3 class="filter__count-title filter-title">Колькасць</h3>
-						<div id="slider2"></div>
-					</div>
-					<div class="filter__color" id="filter-color">
-						<h3 class="filter__color-title filter-title">Колер</h3>
-						<div class="filter__section checkbox">
-							<label for="white" class="checkbox__label">
-								<input type="checkbox" name="" id="white" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Белы</span>
-							</label>
-							<label for="red" class="checkbox__label">
-								<input type="checkbox" name="" id="red" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Чырвоны</span>
-							</label>
-							<label for="blue" class="checkbox__label">
-								<input type="checkbox" name="" id="blue" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Блакітны</span>
-							</label>
-							<label for="black" class="checkbox__label">
-								<input type="checkbox" name="" id="black" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Чорны</span>
-							</label>
-							<label for="yellow" class="checkbox__label">
-								<input type="checkbox" name="" id="yellow" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Жоўты</span>
-							</label>
-							<label for="grey" class="checkbox__label">
-								<input type="checkbox" name="" id="grey" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Шэры</span>
-							</label>
-						</div>
-					</div>
-					<div class="filter__favorite" id="filter-favorite">
-						<h3 class="filter__favoritet-title filter-title">Абранае</h3>
-						<div class="form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-								checked="">
-							<label class="form-check-label" for="flexSwitchCheckChecked">
-								<font style="vertical-align: inherit;">
-									<font style="vertical-align: inherit;">Так ці не</font>
-								</font>
-							</label>
-						</div>
-					</div>
-					<div class="filter__size" id="filter-size">
-						<h3 class="filter__size-title filter-title">Памер</h3>
-						<div class="filter__section checkbox">
-							<label for="children" class="checkbox__label">
-								<input type="checkbox" name="" id="children" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Дзіцячы</span>
-							</label>
-							<label for="small" class="checkbox__label">
-								<input type="checkbox" name="" id="small" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Малы</span>
-							</label>
-							<label for="medium" class="checkbox__label">
-								<input type="checkbox" name="" id="medium" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Сярэдні</span>
-							</label>
-							<label for="big" class="checkbox__label">
-								<input type="checkbox" name="" id="big" class="checkbox__input">
-								<span class="checkbox__choice"></span>
-								<span class="checkbox__description">Вялікі</span>
-							</label>
-						</div>
-					</div>
-				</div>
-				<div class="filter__btn">
-					<button class="sort__btn btn" id="filter-btn">Выдаліць</button>
-				</div>
-			</aside>
-			<section class="page-content">
-				<div class="page-content__title">Рэчы</div>
-				<div class="page-content__wrapper">
-					<div class="sort">
-						<div class="sort__wrapper">
-							<label for="sort__select" class="sort-by">Сартыраваць па</label>
-							<div class="sort__select">
-								<select name="sort__select" id="sort__select">
-									<option selected value="0">цане, спачатку мінімальная</option>
-									<option value="1">цане, спачатку максімальная</option>
-									<option value="2">году, ад новых</option>
-									<option value="3">году, ад старэйшых</option>
-								</select>
-							</div>
-						</div>
-						<button class="sort__btn btn" id="sort-btn">Выдаліць</button>
-					</div>
-					<div class="item-list">
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-						<div class="item">
-							<img class="item__image" src="./assets/images/barselona__maika.jpg" alt="barselona__maika">
-							<h3 class="item__description">Майка ФК Барселона 21-22 хатняя</h3>
-							<a class="item__open-popup">падрабязней</a>
-							<div class="item__price-wrapper">
-								<h4 class="item__price">120 руб.</h4>
-								<button class="item__btn">
-									<img src="./assets/icon/to-cart.svg" alt="cart-btn">
-								</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</section>
-		</div>
-	</main>
-
-</body>
-
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__top">
+          <div class="header__top-wrapper wrapper">
+            <ul class="header__contacts">
+              <li class="header__contacts-phone">
+                <img
+                  class="header__contacts-icon"
+                  src="./assets/icon/phone.svg"
+                  alt="icon-phone"
+                  width="32"
+                  height="32"
+                />
+                <a href="tel:+375298689609" class="phone-link">+375298689609</a>
+              </li>
+              <li class="header__contacts-email">
+                <img
+                  class="header__contacts-icon"
+                  src="./assets/icon/email.svg"
+                  alt="icon-mail"
+                  width="32"
+                  height="32"
+                />
+                <a href="mailto:kkolenkaa@gmail.com" class="email-link">kkolenkaa@gmail.com</a>
+              </li>
+            </ul>
+            <ul class="header__right-side">
+              <li class="header__location">
+                <img
+                  class="header__contacts-icon"
+                  src="./assets/icon/location.svg"
+                  alt="icon-location"
+                  width="32"
+                  height="32"
+                />
+                <a class="location-link" href="https://goo.gl/maps/4Ff3eikigqK1hTu37" target="blank">Наша лакацыя</a>
+              </li>
+              <li class="header__signin">
+                <img
+                  class="header__contacts-icon"
+                  src="./assets/icon/login.svg"
+                  alt="icon-sigin"
+                  width="32"
+                  height="32"
+                />
+                <div
+                  class="modal fade"
+                  id="exampleModalToggle"
+                  aria-hidden="true"
+                  aria-labelledby="exampleModalToggleLabel"
+                  tabindex="-1"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Аўтарызацыя</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Электронная пошта</label>
+                            <input type="email" class="form-control" id="inputEmail4" />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Пароль</label>
+                            <input type="password" class="form-control" id="inputPassword4" />
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck" />
+                              <label class="form-check-label" for="gridCheck"> Запомніць мяне </label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Увайсці</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+                          Рэгістрацыя
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="modal fade"
+                  id="exampleModalToggle2"
+                  aria-hidden="true"
+                  aria-labelledby="exampleModalToggleLabel2"
+                  tabindex="-1"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel2">Рэгістрацыя</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form class="row g-3">
+                          <div class="col-md-4">
+                            <label for="validationServer01" class="form-label">Імя</label>
+                            <input
+                              type="text"
+                              class="form-control is-valid"
+                              id="validationServer01"
+                              value="Mark"
+                              required
+                            />
+                            <div class="valid-feedback">Выглядае добра!</div>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="validationServer02" class="form-label">Прозвішча</label>
+                            <input
+                              type="text"
+                              class="form-control is-valid"
+                              id="validationServer02"
+                              value="Otto"
+                              required
+                            />
+                            <div class="valid-feedback">Выглядае добра!</div>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="validationServerUsername" class="form-label">Імя карыстальніка</label>
+                            <div class="input-group has-validation">
+                              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                              <input
+                                type="text"
+                                class="form-control is-invalid"
+                                id="validationServerUsername"
+                                aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                                required
+                              />
+                              <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                Выберыце імя карыстальніка.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="validationServer03" class="form-label">Горад</label>
+                            <input
+                              type="text"
+                              class="form-control is-invalid"
+                              id="validationServer03"
+                              aria-describedby="validationServer03Feedback"
+                              required
+                            />
+                            <div id="validationServer03Feedback" class="invalid-feedback">Укажыце сапраўдны горад.</div>
+                          </div>
+                          <div class="col-md-3">
+                            <label for="validationServer04" class="form-label">Краіна</label>
+                            <select
+                              class="form-select is-invalid"
+                              id="validationServer04"
+                              aria-describedby="validationServer04Feedback"
+                              required
+                            >
+                              <option selected disabled value="">Выбраць...</option>
+                              <option>...</option>
+                            </select>
+                            <div id="validationServer04Feedback" class="invalid-feedback">
+                              Выберыце сапраўдную краіну.
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-check">
+                              <input
+                                class="form-check-input is-invalid"
+                                type="checkbox"
+                                value=""
+                                id="invalidCheck3"
+                                aria-describedby="invalidCheck3Feedback"
+                                required
+                              />
+                              <label class="form-check-label" for="invalidCheck3"> Згодны з умовамі </label>
+                              <div id="invalidCheck3Feedback" class="invalid-feedback">
+                                Вы павінны пагадзіцца перад адпраўкай.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Адправіць форму</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+                          Аўтарызацыя
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Уваход</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="header__bottom-wrapper wrapper">
+            <div class="header__logo">
+              <img class="header__logo-icon" src="./assets/icon/logo.svg" alt="icon-logo" width="64" height="64" />
+              <span class="header__logo-name">Крама футбольных рэчаў</span>
+            </div>
+            <div class="header__working-time">
+              <span>Час працы:</span>
+              <span>пн-сб: 10-00 -- 23-00</span>
+            </div>
+            <a class="header__cart">
+              <img class="header__cart-icon" src="./assets/icon/cart.svg" alt="icon-cart" width="32" height="32" />
+              <span>0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container main__container">
+        <aside class="filter">
+          <div class="filter__title">Фільтар</div>
+          <div class="filter__wrapper">
+            <div class="filter__country" id="filter-country">
+              <h3 class="filter__country-title filter-title">Краіна</h3>
+              <div class="filter__section checkbox">
+                <label for="italy" class="checkbox__label">
+                  <input type="checkbox" name="" id="italy" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Італія</span>
+                </label>
+                <label for="spain" class="checkbox__label">
+                  <input type="checkbox" name="" id="spain" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Іспанія</span>
+                </label>
+                <label for="germany" class="checkbox__label">
+                  <input type="checkbox" name="" id="germany" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Германія</span>
+                </label>
+                <label for="france" class="checkbox__label">
+                  <input type="checkbox" name="" id="france" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Францыя</span>
+                </label>
+                <label for="england" class="checkbox__label">
+                  <input type="checkbox" name="" id="england" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Англія</span>
+                </label>
+                <label for="netherlands" class="checkbox__label">
+                  <input type="checkbox" name="" id="netherlands" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Нідэрланды</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__price" id="filter-price">
+              <h3 class="filter__price-title filter-title">Цана</h3>
+              <div id="slider1"></div>
+            </div>
+            <div class="filter__clothes" id="filter-clothes">
+              <h3 class="filter__clothes-title filter-title">Экіпіроўка</h3>
+              <div class="filter__section checkbox">
+                <label for="t-shirt" class="checkbox__label">
+                  <input type="checkbox" name="" id="t-shirt" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Цішотка</span>
+                </label>
+                <label for="football-kit" class="checkbox__label">
+                  <input type="checkbox" name="" id="football-kit" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Футбольная форма</span>
+                </label>
+                <label for="training-suit" class="checkbox__label">
+                  <input type="checkbox" name="" id="training-suit" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Трэніровачны касцюм</span>
+                </label>
+                <label for="other" class="checkbox__label">
+                  <input type="checkbox" name="" id="other" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Іншае</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__count" id="filter-count">
+              <h3 class="filter__count-title filter-title">Колькасць</h3>
+              <div id="slider2"></div>
+            </div>
+            <div class="filter__color" id="filter-color">
+              <h3 class="filter__color-title filter-title">Колер</h3>
+              <div class="filter__section checkbox">
+                <label for="white" class="checkbox__label">
+                  <input type="checkbox" name="" id="white" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Белы</span>
+                </label>
+                <label for="red" class="checkbox__label">
+                  <input type="checkbox" name="" id="red" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Чырвоны</span>
+                </label>
+                <label for="blue" class="checkbox__label">
+                  <input type="checkbox" name="" id="blue" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Блакітны</span>
+                </label>
+                <label for="black" class="checkbox__label">
+                  <input type="checkbox" name="" id="black" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Чорны</span>
+                </label>
+                <label for="yellow" class="checkbox__label">
+                  <input type="checkbox" name="" id="yellow" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Жоўты</span>
+                </label>
+                <label for="grey" class="checkbox__label">
+                  <input type="checkbox" name="" id="grey" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Шэры</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter__favorite" id="filter-favorite">
+              <h3 class="filter__favoritet-title filter-title">Абранае</h3>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked="" />
+                <label class="form-check-label" for="flexSwitchCheckChecked">
+                  <font style="vertical-align: inherit">
+                    <font style="vertical-align: inherit">Так ці не</font>
+                  </font>
+                </label>
+              </div>
+            </div>
+            <div class="filter__size" id="filter-size">
+              <h3 class="filter__size-title filter-title">Памер</h3>
+              <div class="filter__section checkbox">
+                <label for="children" class="checkbox__label">
+                  <input type="checkbox" name="" id="children" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Дзіцячы</span>
+                </label>
+                <label for="small" class="checkbox__label">
+                  <input type="checkbox" name="" id="small" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Малы</span>
+                </label>
+                <label for="medium" class="checkbox__label">
+                  <input type="checkbox" name="" id="medium" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Сярэдні</span>
+                </label>
+                <label for="big" class="checkbox__label">
+                  <input type="checkbox" name="" id="big" class="checkbox__input" />
+                  <span class="checkbox__choice"></span>
+                  <span class="checkbox__description">Вялікі</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="filter__btn">
+            <button class="sort__btn btn" id="filter-btn">Выдаліць</button>
+          </div>
+        </aside>
+        <section class="page-content">
+          <div class="page-content__title">Рэчы</div>
+          <div class="page-content__wrapper">
+            <div class="sort">
+              <div class="sort__wrapper">
+                <label for="sort__select" class="sort-by">Сартыраваць па</label>
+                <div class="sort__select">
+                  <select name="sort__select" id="sort__select">
+                    <option selected value="0">цане, спачатку мінімальная</option>
+                    <option value="1">цане, спачатку максімальная</option>
+                    <option value="2">году, ад новых</option>
+                    <option value="3">году, ад старэйшых</option>
+                  </select>
+                </div>
+              </div>
+              <button class="sort__btn btn" id="sort-btn">Выдаліць</button>
+            </div>
+            <div class="item-list" id="products-grid"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
