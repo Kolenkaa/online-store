@@ -3,6 +3,7 @@ import { products } from "./data/products";
 import { createProductCardHtml } from "./features/productCard/createProductCards";
 import { countryFilterCheckboxes } from "./features/filters/countryFilter";
 import { typeOfClothingCheckboxes } from "./features/filters/typeOfClothingFilter";
+import { colorFilterCheckboxes } from "./features/filters/colorFilter";
 
 import "nouislider/dist/nouislider.css";
 import "./styles.scss";
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	console.log(countryFilterCheckboxes, "inputss");
 	console.log(typeOfClothingCheckboxes, "typeOfClothingCheckboxes");
+	console.log(colorFilterCheckboxes, "colorFilterCheckboxes");
 	
 
 	products.forEach((product) => {
@@ -62,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			imageSrc: product.img,
 			price: product.price,
 			countryCode: product.teamCountry,
-			typeOfClothing: product.typeOfClothing
+			typeOfClothing: product.typeOfClothing,
+			color: product.color
 		});
 
 		productsGrid.appendChild(productCardHtml);

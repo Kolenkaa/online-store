@@ -4,13 +4,16 @@ type CardOptions = {
 	imageSrc: string;
 	price: number;
 	countryCode: string;
-	typeOfClothing: string
+	typeOfClothing: string;
+	color: string;
 };
 
-function createProductCardHtml({ id, name, imageSrc, price, countryCode, typeOfClothing }: CardOptions) {
+function createProductCardHtml({ id, name, imageSrc, price, countryCode, typeOfClothing, color }: CardOptions) {
 	const cardItem = document.createElement("div");
 	cardItem.id = id;
 	cardItem.dataset.countryCode = countryCode;	
+	cardItem.dataset.typeOfClothing = typeOfClothing;
+	cardItem.dataset.color = color;
 	cardItem.className = "item";
 
 	const cardImage = document.createElement("img");
@@ -19,7 +22,6 @@ function createProductCardHtml({ id, name, imageSrc, price, countryCode, typeOfC
 
 	const cardTitle = document.createElement("h3");
 	cardTitle.innerText = name;
-	cardItem.dataset.typeOfClothing = typeOfClothing;
 	cardTitle.className = "item__description";
 
 	const cardLink = document.createElement("a");
