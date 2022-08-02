@@ -337,6 +337,7 @@ body {
 		margin-bottom: 8px;
 		border-radius: 8px;
 		cursor: pointer;
+		height: 200px;
 	}
 
 	&__description {
@@ -359,6 +360,11 @@ body {
 
 	&__price {
 		color: #05070e;
+	}
+
+	&__image-favorites {
+		width: 24px;
+
 	}
 
 	&__btn {
