@@ -182,7 +182,7 @@ body {
 		}
 
 		&__price,
-		&__clothes,
+		&__type-clothing,
 		&__count,
 		&__color,
 		&__favorite,
@@ -328,6 +328,7 @@ body {
 .item {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	padding: 8px 12px;
 	border: 1px solid #5d5f66;
 	border-radius: 8px;	

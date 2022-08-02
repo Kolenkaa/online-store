@@ -1,12 +1,11 @@
 import { getAllProductCards } from "../productCard/getAllProductCards";
 
-const countryFilterCheckboxes = document.querySelectorAll(
-	"#filter-country input[type='checkbox']") as NodeListOf<HTMLInputElement>;
+const typeOfClothingCheckboxes = document.querySelectorAll("#filter-type--clothing input[type='checkbox']") as NodeListOf<HTMLInputElement>
 
 function getActiveFilters() {
 	const activeFilters: Record<string, boolean> = {};
 
-	countryFilterCheckboxes.forEach((input) => {
+	typeOfClothingCheckboxes.forEach((input) => {
 		if (input.checked) {
 			activeFilters[input.id] = input.checked;
 		}
@@ -15,27 +14,27 @@ function getActiveFilters() {
 	return activeFilters;
 }
 
-countryFilterCheckboxes.forEach((countryFilterInput) => {
-	(countryFilterInput as HTMLInputElement).onchange = (event: InputEvent) => {
-		const countryFilterChecked = (event.target as HTMLInputElement).checked;
+typeOfClothingCheckboxes.forEach((typeOfClothingInput) => {
+	(typeOfClothingInput as HTMLInputElement).onchange = (event: InputEvent) => {
+		const typeOfClothingChecked = (event.target as HTMLInputElement).checked;
 
 		const productCards = getAllProductCards();
 
 		const activeFilters = getActiveFilters();
 
 		productCards.forEach((product) => {
-			const countryCode = product.dataset.countryCode;
+			const typeOfClothing = product.dataset.typeOfClothing;		
 
 			// Ecли ипнут = checked и в активных фильтрах нету продукта с соответствующим countryCode
-			if (countryFilterChecked && !activeFilters[countryCode]) {
+			if (typeOfClothingChecked && !activeFilters[typeOfClothing]) {
 				product.style.display = "none";
 			}
 			// Ecли ипнут = checked и в активных фильтрах есть продукт с соответствующим countryCode и он не видим на, т.е. display none
-			if (countryFilterChecked && activeFilters[countryCode] && product.style.display === "none") {
+			if (typeOfClothingChecked && activeFilters[typeOfClothing] && product.style.display === "none") {
 				product.style.display = "flex";
 			}
 			// Ecли ипнут != checked и в активных фильтрах нету продукта с соответствующим countryCode и он является видимым, нужно его скрыть
-			if (!countryFilterChecked && !activeFilters[countryCode] && product.style.display === "flex") {
+			if (!typeOfClothingChecked && !activeFilters[typeOfClothing] && product.style.display === "flex") {
 				product.style.display = "none";
 			}
 
@@ -47,4 +46,4 @@ countryFilterCheckboxes.forEach((countryFilterInput) => {
 	};
 });
 
-export { countryFilterCheckboxes };
+export { typeOfClothingCheckboxes }
