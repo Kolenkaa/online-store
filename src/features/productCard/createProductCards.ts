@@ -6,14 +6,16 @@ type CardOptions = {
 	countryCode: string;
 	typeOfClothing: string;
 	color: string;
+	size: string;
 };
 
-function createProductCardHtml({ id, name, imageSrc, price, countryCode, typeOfClothing, color }: CardOptions) {
+function createProductCardHtml({ id, name, imageSrc, price, countryCode, typeOfClothing, color, size }: CardOptions) {
 	const cardItem = document.createElement("div");
 	cardItem.id = id;
 	cardItem.dataset.countryCode = countryCode;	
 	cardItem.dataset.typeOfClothing = typeOfClothing;
 	cardItem.dataset.color = color;
+	cardItem.dataset.size = size;
 	cardItem.className = "item";
 
 	const cardImage = document.createElement("img");

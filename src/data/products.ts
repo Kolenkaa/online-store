@@ -23,7 +23,7 @@ const products: Product[] = [
 		teamCountry: "ES",
 		typeOfClothing: "t-shirt",
 		color: "blue",
-		size: "вялікі",
+		size: "XXL",
 		favorite: false,
 	},
 	{
@@ -36,7 +36,7 @@ const products: Product[] = [
 		teamCountry: "ES",
 		typeOfClothing: "t-shirt",
 		color: "white",
-		size: "вялікі",
+		size: "XXL",
 		favorite: true,
 	},
 	{
@@ -49,7 +49,7 @@ const products: Product[] = [
 		teamCountry: "EN",
 		typeOfClothing: "t-shirt",
 		color: "red",
-		size: "сярэдні",
+		size: "XL",
 		favorite: true,
 	},
 	{
@@ -62,7 +62,7 @@ const products: Product[] = [
 		teamCountry: "EN",
 		typeOfClothing: "t-shirt",
 		color: "red",
-		size: "дзіцячы",
+		size: "S",
 		favorite: false,
 	},
 	{
@@ -75,7 +75,7 @@ const products: Product[] = [
 		teamCountry: "GE",
 		typeOfClothing: "t-shirt",
 		color: "yellow",
-		size: "сярэдні",
+		size: "XL",
 		favorite: true,
 	},
 	{
@@ -88,7 +88,7 @@ const products: Product[] = [
 		teamCountry: "GE",
 		typeOfClothing: "t-shirt",
 		color: "red",
-		size: "вялікі",
+		size: "XXL",
 		favorite: false,
 	},
 	{
@@ -101,7 +101,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "football-kit",
 		color: "white",
-		size: "сярэдні",
+		size: "XL",
 		favorite: false,
 	},
 	{
@@ -114,7 +114,7 @@ const products: Product[] = [
 		teamCountry: "EN",
 		typeOfClothing: "football-kit",
 		color: "red",
-		size: "вялікі",
+		size: "XXL",
 		favorite: false,
 	},
 	{
@@ -127,7 +127,7 @@ const products: Product[] = [
 		teamCountry: "FR",
 		typeOfClothing: "football-kit",
 		color: "blue",
-		size: "малы",
+		size: "M",
 		favorite: false,
 	},
 	{
@@ -140,7 +140,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "football-kit",
 		color: "red",
-		size: "вялікі",
+		size: "XXL",
 		favorite: true,
 	},
 	{
@@ -153,7 +153,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "football-kit",
 		color: "blue",
-		size: "малы",
+		size: "M",
 		favorite: false,
 	},
 	{
@@ -166,12 +166,12 @@ const products: Product[] = [
 		teamCountry: "ES",
 		typeOfClothing: "training-suit",
 		color: "blue",
-		size: "сярэдні",
+		size: "XL",
 		favorite: false,
 	},
 	{
 		id: "13",
-		name: "Трэніровачны касцюм дзіцячы ФК Ліверпуль grey",
+		name: "Трэніровачны касцюм S ФК Ліверпуль grey",
 		img: "../assets/images/liverpool__trainy.jpg",
 		price: 145,
 		count: 2,
@@ -179,7 +179,7 @@ const products: Product[] = [
 		teamCountry: "EN",
 		typeOfClothing: "training-suit",
 		color: "grey",
-		size: "вялікі",
+		size: "XXL",
 		favorite: true,
 	},
 	{
@@ -192,7 +192,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "training-suit",
 		color: "black",
-		size: "малы",
+		size: "M",
 		favorite: false,
 	},
 	{
@@ -205,7 +205,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "training-suit",
 		color: "black",
-		size: "сярэдні",
+		size: "XL",
 		favorite: true,
 	},
 	{
@@ -218,7 +218,7 @@ const products: Product[] = [
 		teamCountry: "ES",
 		typeOfClothing: "other",
 		color: "grey",
-		size: "дзіцячы",
+		size: "S",
 		favorite: true,
 	},
 	{
@@ -231,7 +231,7 @@ const products: Product[] = [
 		teamCountry: "GE",
 		typeOfClothing: "other",
 		color: "black",
-		size: "сярэдні",
+		size: "XL",
 		favorite: false,
 	},
 	{
@@ -244,7 +244,7 @@ const products: Product[] = [
 		teamCountry: "IT",
 		typeOfClothing: "other",
 		color: "white",
-		size: "малы",
+		size: "M",
 		favorite: false,
 	},
 	{
@@ -257,7 +257,7 @@ const products: Product[] = [
 		teamCountry: "NL",
 		typeOfClothing: "t-shirt",
 		color: "white",
-		size: "сярэдні",
+		size: "XL",
 		favorite: false,
 	},
 	{
@@ -270,7 +270,7 @@ const products: Product[] = [
 		teamCountry: "NL",
 		typeOfClothing: "other",
 		color: "white",
-		size: "дзіцячы",
+		size: "S",
 		favorite: false,
 	},
 ];
