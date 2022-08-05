@@ -5,17 +5,19 @@ import { countryFilterCheckboxes } from "./features/filters/countryFilter";
 import { typeOfClothingCheckboxes } from "./features/filters/typeOfClothingFilter";
 import { colorFilterCheckboxes } from "./features/filters/colorFilter";
 import { sizeFilterCheckboxes } from "./features/filters/sizeFilter";
+import { favoriteFilterCheckboxes } from "./features/filters/favoriteFilter";
 
 import "nouislider/dist/nouislider.css";
 import "./styles.scss";
 
-const slider1 = document.getElementById("slider1");
-const slider2 = document.getElementById("slider2");
+const sliderPrice = document.getElementById("slider-price");
+const sliderCount = document.getElementById("slider-count");
 
-noUiSlider.create(slider1, {
+noUiSlider.create(sliderPrice, {
 	start: [0, 310],
 	tooltips: true,
 	connect: true,
+	
 	step: 1,
 	range: {
 		min: 0,
@@ -31,7 +33,7 @@ noUiSlider.create(slider1, {
 	},
 });
 
-noUiSlider.create(slider2, {
+noUiSlider.create(sliderCount, {
 	start: [0, 10],
 	tooltips: true,
 	connect: true,
@@ -50,6 +52,18 @@ noUiSlider.create(slider2, {
 	},
 });
 
+
+function doSomething() {
+	// values: Current slider values (array);
+	// handle: Handle that caused the event (number);
+	// unencoded: Slider values without formatting (array);
+	// tap: Event was caused by the user tapping the slider (boolean);
+	// positions: Left offset of the handles (array);
+	// noUiSlider: slider public Api (noUiSlider);
+}
+
+sliderPrice.on('change.one', function () { });
+
 document.addEventListener("DOMContentLoaded", function () {
 	const productsGrid = document.getElementById("products-grid");
 
@@ -57,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	console.log(typeOfClothingCheckboxes, "typeOfClothingCheckboxes");
 	console.log(colorFilterCheckboxes, "colorFilterCheckboxes");
 	console.log(sizeFilterCheckboxes, "sizeFilterCheckboxes");
+	console.log(favoriteFilterCheckboxes, "favoriteFilterCheckboxes");
 	
 
 	products.forEach((product) => {
@@ -68,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			countryCode: product.teamCountry,
 			typeOfClothing: product.typeOfClothing,
 			color: product.color,
-			size: product.size
+			size: product.size,
+			favorite: product.favorite
 		});
 
 		productsGrid.appendChild(productCardHtml);

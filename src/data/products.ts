@@ -9,7 +9,7 @@ type Product = {
 	typeOfClothing: string;
 	color: string;
 	size: string;
-	favorite: boolean;
+	favorite: string;
 };
 
 const products: Product[] = [
@@ -24,11 +24,11 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "blue",
 		size: "XXL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "2",
-		name: "Цішотка ФК Реал Мадрыд 21-22 хатняя",
+		name: "Цішотка ФК Рэал Мадрыд 21-22 хатняя",
 		img: "../assets/images/real__maika.jpg",
 		price: 118,
 		count: 2,
@@ -37,7 +37,7 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "white",
 		size: "XXL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "3",
@@ -50,7 +50,7 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "red",
 		size: "XL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "4",
@@ -63,7 +63,7 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "red",
 		size: "S",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "5",
@@ -76,7 +76,7 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "yellow",
 		size: "XL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "6",
@@ -89,11 +89,11 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "red",
 		size: "XXL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "7",
-		name: "Футбольная форма дзіцячая ФК Ювентус 21-22 хатняя",
+		name: "Футбольная форма ФК Ювентус 21-22 хатняя",
 		img: "../assets/images/Juve__form.jpg",
 		price: 130,
 		count: 2,
@@ -102,7 +102,7 @@ const products: Product[] = [
 		typeOfClothing: "football-kit",
 		color: "white",
 		size: "XL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "8",
@@ -115,11 +115,11 @@ const products: Product[] = [
 		typeOfClothing: "football-kit",
 		color: "red",
 		size: "XXL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "9",
-		name: "Футбольная форма дзіцячая ФК ПСЖ 21-22 хатняя",
+		name: "Футбольная форма ФК ПСЖ 21-22 хатняя",
 		img: "../assets/images/PSG__form.jpg",
 		price: 150,
 		count: 2,
@@ -128,11 +128,11 @@ const products: Product[] = [
 		typeOfClothing: "football-kit",
 		color: "blue",
 		size: "M",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "10",
-		name: "Футбольная форма дзіцячая ФК Мілан 21-22 хатняя",
+		name: "Футбольная форма ФК Мілан 21-22 хатняя",
 		img: "../assets/images/Milan__form.jpg",
 		price: 110,
 		count: 2,
@@ -141,7 +141,7 @@ const products: Product[] = [
 		typeOfClothing: "football-kit",
 		color: "red",
 		size: "XXL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "11",
@@ -154,11 +154,11 @@ const products: Product[] = [
 		typeOfClothing: "football-kit",
 		color: "blue",
 		size: "M",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "12",
-		name: "Трэніровачны касцюм ФК Барселона blu Nike",
+		name: "Трэніровачны касцюм ФК Барселона блакітны Nike",
 		img: "../assets/images/barselona__trainy.jpg",
 		price: 160,
 		count: 2,
@@ -167,11 +167,11 @@ const products: Product[] = [
 		typeOfClothing: "training-suit",
 		color: "blue",
 		size: "XL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "13",
-		name: "Трэніровачны касцюм S ФК Ліверпуль grey",
+		name: "Трэніровачны касцюм ФК Ліверпуль шэры",
 		img: "../assets/images/liverpool__trainy.jpg",
 		price: 145,
 		count: 2,
@@ -180,7 +180,7 @@ const products: Product[] = [
 		typeOfClothing: "training-suit",
 		color: "grey",
 		size: "XXL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "14",
@@ -193,11 +193,11 @@ const products: Product[] = [
 		typeOfClothing: "training-suit",
 		color: "black",
 		size: "M",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "15",
-		name: "Трэніровачны касцюм ФК Мілан чорна-red",
+		name: "Трэніровачны касцюм ФК Мілан чорна-чырвоны",
 		img: "../assets/images/Milan__trainy.jpg",
 		price: 150,
 		count: 2,
@@ -206,11 +206,11 @@ const products: Product[] = [
 		typeOfClothing: "training-suit",
 		color: "black",
 		size: "XL",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "16",
-		name: "Бутылка для вады ФК Реал",
+		name: "Бутэлька для вады ФК Рэал",
 		img: "../assets/images/Real__botle.jpg",
 		price: 20,
 		count: 2,
@@ -219,7 +219,7 @@ const products: Product[] = [
 		typeOfClothing: "other",
 		color: "grey",
 		size: "S",
-		favorite: true,
+		favorite: "true",
 	},
 	{
 		id: "17",
@@ -232,7 +232,7 @@ const products: Product[] = [
 		typeOfClothing: "other",
 		color: "black",
 		size: "XL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "18",
@@ -245,7 +245,7 @@ const products: Product[] = [
 		typeOfClothing: "other",
 		color: "white",
 		size: "M",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "19",
@@ -258,7 +258,7 @@ const products: Product[] = [
 		typeOfClothing: "t-shirt",
 		color: "white",
 		size: "XL",
-		favorite: false,
+		favorite: "false",
 	},
 	{
 		id: "20",
@@ -271,7 +271,7 @@ const products: Product[] = [
 		typeOfClothing: "other",
 		color: "white",
 		size: "S",
-		favorite: false,
+		favorite: "false",
 	},
 ];
 
