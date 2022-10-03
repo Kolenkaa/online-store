@@ -28,3 +28,5 @@ document.addEventListener("DOMContentLoaded", function () {
     productsGrid.appendChild(productCardHtml);
   });
 });
+
+console.log('123');
